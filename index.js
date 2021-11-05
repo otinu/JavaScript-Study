@@ -83,3 +83,21 @@ console.log(tinu.fishingStyle);
 // ブラウザのコンソールでは、fishedCountの数ではなく、関数全体のコードが出力されてしまった
 console.log(tinu.howMany);
 
+//特殊なオブジェクト(Window)　===============================
+
+// ブラウザ上に表示される画面幅(高さ)をピクセル数で表示
+console.log(window.innerHeight);
+
+// ブラウザ上に表示される画面幅(横幅)をピクセル数で表示
+console.log(window.innerWidth);
+
+// ブラウザ画面にポップアップを表示
+window.alert("Hello World");
+
+//特殊なオブジェクト(Document)　===============================
+
+// Webページ全体(DOMツリー)の情報を保持するのがdocument
+console.log(document);
+
+// タグの名称から該当タグの情報を取得
+console.log(document.getElementsByTagName("h1"));
