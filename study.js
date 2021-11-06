@@ -73,6 +73,7 @@ let first_fishing = `初めて釣った魚は${fish3}でした`;
 console.log(first_fishing);
 
 /*  配列の途中までの注入で止めることも可能
+    その他、スプレッド構文を用いて、途中～最後までの要素を一気にまとめて注入することも可能
 
 let [fish5, fish6] = many_fish;
 first_fishing = `初めて釣った魚は${fish5}でした`;
@@ -91,3 +92,14 @@ sayHello("otinu");
 const { child = "チャリコ" } = fish;
 const child_message = `${child}は真鯛の稚魚`;
 console.log(child_message);
+
+//  スプレッド構文  ===============================
+
+console.log(many_fish);
+console.log(...many_fish); //  配列の要素を展開して出力
+
+//  map  ===============================
+
+//  戻り値を受け取る必要がない場合にmapを使うと、for文よりもスリムに配列の全要素を渡すことができる
+
+many_fish.map((fish_name) => console.log(fish_name));
