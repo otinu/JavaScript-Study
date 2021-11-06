@@ -1,6 +1,6 @@
 //  JavaScript 追加学習
 
-//  オブジェクト　===============================
+//  const　===============================
 
 //  プリミティブ型のデータは通常の定数として扱われる
 
@@ -20,3 +20,12 @@ fish.cook = "kobujime";
 
 // nameの変更もされ、新しい要素(cook)も追加されている
 console.log(fish);
+
+//  配列もオブジェクト型と同様に変更や追加が可能
+
+const many_fish = ["tinu", "gure", "kiss", "bera"];
+
+many_fish[0] = "tanago";
+many_fish.push("tinu"); //pushメソッドで配列末尾に追加
+
+console.log(many_fish);
