@@ -29,3 +29,13 @@ many_fish[0] = "tanago";
 many_fish.push("tinu"); //pushメソッドで配列末尾に追加
 
 console.log(many_fish);
+
+// テンプレート文字列　===============================
+
+const fish_name = "チヌ";
+const fish_cook = "昆布締め";
+
+//  テンプレート文字列はバッククォート(Shift + @)で囲む
+const message = `${fish_name}は${fish_cook}だと臭みが和らいで美味しい`;
+
+console.log(message);
