@@ -39,3 +39,42 @@ const fish_cook = "昆布締め";
 const message = `${fish_name}は${fish_cook}だと臭みが和らいで美味しい`;
 
 console.log(message);
+
+//  オブジェクトの分割代入　===============================
+
+const fishing = {
+  style: "フカセ釣り",
+  tool: "撒き餌",
+};
+
+/*  オブジェクトのプロパティを変数「style」「tool」「name」に代入。
+　　⇒SpringのDIと似ている印象
+
+  const { style, tool} = fishing;
+  const { name } = fish;
+*/
+
+//  値を注入する際、プロパティ名から別名に変更可能
+const { style: fishing_style, tool: fishing_bait } = fishing;
+const { name: target } = fish;
+
+//  2つのオブジェクトからの分割代入を経由しても、一つのテンプレート文字列から出力可能
+const fishing_message = `${fishing_style}は${fishing_bait}によって、${target}が釣れるかが左右されます`;
+console.log(fishing_message);
+
+//  配列の分割代入　===============================
+
+//  配列の分割代入では、変数名は任意
+//  ただし、変数名の順番と配列の順番は一致させる必要がある
+
+let [fish1, fish2, fish3, fish4] = many_fish; //26行目に宣言
+let first_fishing = `初めて釣った魚は${fish3}でした`;
+
+console.log(first_fishing);
+
+/*  配列の途中までの注入で止めることも可能
+
+let [fish5, fish6] = many_fish;
+first_fishing = `初めて釣った魚は${fish5}でした`;
+console.log(first_fishing);
+*/
