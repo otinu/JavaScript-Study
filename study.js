@@ -78,3 +78,16 @@ let [fish5, fish6] = many_fish;
 first_fishing = `初めて釣った魚は${fish5}でした`;
 console.log(first_fishing);
 */
+
+//  デフォルト値　===============================
+
+const sayHello = (name = "ゲスト") => console.log(`Hello ${name}!!`);
+
+sayHello();
+sayHello("otinu");
+
+//  オブジェクトから注入する際にもデフォルト値の設定が可能
+//  const { child } = fish;
+const { child = "チャリコ" } = fish;
+const child_message = `${child}は真鯛の稚魚`;
+console.log(child_message);
