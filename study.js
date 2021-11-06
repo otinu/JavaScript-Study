@@ -114,3 +114,8 @@ const newNumberArray = numberArray.filter((num) => {
 });
 
 console.log(newNumberArray);
+
+//  Rubyのeach_with_indexメソッドのように、mapメソッドも第二引数の指定でindexとして機能する
+many_fish.map((fish_name, index) =>
+  console.log(`${index + 1}番目は${fish_name} です`)
+);
