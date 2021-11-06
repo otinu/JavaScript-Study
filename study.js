@@ -103,3 +103,14 @@ console.log(...many_fish); //  配列の要素を展開して出力
 //  戻り値を受け取る必要がない場合にmapを使うと、for文よりもスリムに配列の全要素を渡すことができる
 
 many_fish.map((fish_name) => console.log(fish_name));
+
+//  filter  ===============================
+
+const numberArray = [1, 2, 3, 4, 5];
+
+//  配列の中から特定の条件に一致するものを取り出して処理をしたい場合に使用する
+const newNumberArray = numberArray.filter((num) => {
+  return num % 2 === 1;
+});
+
+console.log(newNumberArray);
