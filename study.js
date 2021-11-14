@@ -88,7 +88,7 @@ sayHello();
 sayHello("otinu");
 
 //  オブジェクトから注入する際にもデフォルト値の設定が可能
-//  const { child } = fish;
+//  const { child } = fish; この場合だと、デフォルト値なしでの出力
 const { child = "チャリコ" } = fish;
 const child_message = `${child}は真鯛の稚魚`;
 console.log(child_message);
